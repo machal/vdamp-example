@@ -1,0 +1,27 @@
+/*
+UI komponenta Navigace
+======================
+*/
+
+.nav { }
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav-list-item {
+  margin-left: 0.5em;
+}
+
+.nav-list-item:first-child {
+  margin-left: 0;
+}
+
+.nav-anchor {
+  display: block;
+  height: 48px;
+}
+

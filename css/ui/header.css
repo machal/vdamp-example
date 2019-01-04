@@ -1,0 +1,37 @@
+/*
+UI komponenta Header
+====================
+*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.header-logo {
+  margin-bottom: 0;
+}
+
+.header-nav {
+  /* Vzdy vpravo: */
+  margin-left: auto;
+}
+
+/* Male displeje: serazeno pod sebou */
+
+@media only screen and (max-width: 29em) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo {
+    margin-bottom: 1rem;
+  }
+
+  .header-nav {
+    margin-left: 0;
+  }
+}

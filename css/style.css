@@ -21,12 +21,15 @@
 
 @import 'ui/add-to-card.css';
 @import 'ui/box.css';
+@import 'ui/badge.css';
 @import 'ui/button.css';
 @import 'ui/card.css';
 @import 'ui/gallery.css';
+@import 'ui/header.css';
 @import 'ui/logo.css';
 @import 'ui/list.css';
 @import 'ui/media-object.css';
+@import 'ui/nav.css';
 @import 'ui/star.css';
 @import 'ui/stepper.css';
 @import 'ui/variants.css';
