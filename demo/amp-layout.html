@@ -37,7 +37,7 @@
   <body>
     <h1>The AMP Layout</h1>
 
-    <h2>fixed</h2>
+    <h2>display="fixed"</h2>
 
     <div class="container">
       <div class="container-in">
@@ -49,7 +49,7 @@
        </div>
     </div>
 
-    <h2>responsive</h2>
+    <h2>display="responsive"</h2>
 
     <div class="container">
       <div class="container-in">
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <h2>intrinsic</h2>
+    <h2>display="intrinsic"</h2>
 
     <div class="container">
       <div class="container-in">
@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <h2>flex-item</h2>
+    <h2>display="flex-item"</h2>
 
     <div class="container">
       <div class="container-in container-in--for-flex-item">
@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <h2>fixed-height</h2>
+    <h2>display="fixed-height"</h2>
 
     <div class="container">
       <div class="container-in">
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <h2>fill</h2>
+    <h2>display="fill"</h2>
 
     <div class="container">
       <div class="container-in container-in--for-fill">
@@ -116,7 +116,7 @@
       </div>
     </div>
 
-    <h2>nodisplay</h2>
+    <h2>display="nodisplay"</h2>
 
     <div class="container">
       <div class="container-in">
@@ -125,6 +125,25 @@
             height="90"
             layout="nodisplay"
             alt=""></amp-img>
+      </div>
+    </div>
+
+    <h2>Atribut media</h2>
+
+    <div class="container">
+      <div class="container-in">
+        <amp-img src="../img/placeholder/placeholder-grey-16-9.jpg"
+          media="(max-width: 600px)"
+          width="160"
+          height="90"
+          layout="responsive"
+          alt=""></amp-img>
+        <amp-img src="../img/placeholder/placeholder-green-16-9.jpg"
+          media="(min-width: 599px)"
+          width="160"
+          height="90"
+          layout="responsive"
+          alt=""></amp-img>
       </div>
     </div>
 
