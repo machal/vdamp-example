@@ -11,6 +11,7 @@
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 
   <title>
     Dětské celoroční trekové boty Fare | E-shop ForestKid.cz
@@ -469,7 +470,7 @@
     /**
     * Add the correct display in IE 10-.
     */
-    [hidden] {
+    [hidden], .hidden {
       display: none;
     }
 
@@ -1794,6 +1795,14 @@
 </head>
 
 <body>
+  <amp-state id="myState">
+    <script type="application/json">
+      {
+        "cart": 0,
+        "count": 1
+      }
+    </script>
+  </amp-state>
 
   <a href="#main" class="focus-only">skok na hlavní obsah</a>
 
@@ -1834,9 +1843,9 @@
         <ul class="nav-list">
           <li class="nav-list-item badge-container">
             <a href="#kosik" class="nav-anchor"><amp-img src="img/vector/icon-cart.svg" alt="Košík" width="48" height="48"></amp-img></a>
-            <span class="badge">
+            <span class="hidden" [class]="(myState.cart != 0 ? 'badge' : 'hidden')" >
               <span class="sr-only">V košíku je nyní produktů:</span>
-              <strong class="badge-count">2</strong>
+              <strong class="badge-count" [text]="myState.cart">0</strong>
             </span>
           </li>
           <li class="nav-list-item">
@@ -1900,7 +1909,11 @@
         <div class="layout-text">
 
           
-          <form target="_top" action="#" ><!--action="https://forestkid.cz/cart"-->
+          <form
+            target="_top"
+            method="post"
+            action-xhr="https://ampbyexample.com/components/amp-form/submit-form-input-text-xhr"
+            on="submit-success: AMP.setState({ myState: { 'cart': myState.cart + myState.count, 'count': 1 } })">
             <section class="mb-3" role="region" aria-labelledby="varianty">
               
               <h2 id="varianty" class="sr-only">Varianty a jejich dostupnost</h2>
@@ -1954,7 +1967,14 @@
                 </div>
                 <div class="add-to-card-form">
                   <p class="add-to-card-input m-0 mr-0-5">
-                    <input type="number" inputmode="numeric" class="w-2 ta-r" name="count" value="1">
+                    <input
+                      type="number"
+                      inputmode="numeric"
+                      class="w-2 ta-r"
+                      name="count"
+                      value="1"
+                      [value]="myState.count"
+                      on="change:AMP.setState({ 'myState': { 'count': +event.value } })">
                   </p>
                   <p class="add-to-card-button m-0">
                     <button class="button button-primary">Přidat do košíku</button>
