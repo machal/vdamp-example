@@ -1113,8 +1113,11 @@ TODO radeji komponenta .table
 table {
   margin-bottom: 1.25em;
   width: 100%;
-  border-top: 1px solid lightgrey;
   border-collapse: collapse;
+}
+
+table:first-child {
+  border-top: 1px solid lightgrey;
 }
 
 table th,
@@ -1614,6 +1617,14 @@ Zakladni stylovani
 .variants-table th,
 .variants-table td {
   white-space: nowrap;
+}
+
+.available-false {
+  color: var(--color-text-50);
+}
+
+.available-false input {
+  display: none;
 }
 
 /* Vzhled hlavicky tabulek */
