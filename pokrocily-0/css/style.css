@@ -1396,7 +1396,7 @@ Fotogalerie
 }
 
 .gallery-thumbs {
-  height: calc(2.5em + 5vw);
+  height: 90px;
 }
 
 .gallery-thumbs img {
