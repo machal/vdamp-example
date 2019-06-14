@@ -199,23 +199,24 @@
 
               <div class="variants mb-3">
                 <div class="variants-table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th class="variants-table-radio"></th>
-                        <th class="variants-table-size">Vel.</th>
-                        <th class="variants-table-width">Vn. délka</th>
-                        <th class="variants-table-delivery">U vás</th>
-                      </tr>
-                    </thead>
-                  </table>
                   <amp-list width="auto"
-                  height="300"
+                  height="320"
                   layout="fixed-height"
+                  items="."
+                  single-item
                   src="boty.json">
                   <template type="amp-mustache">
-                    <table class="available-{{available}}">
-                      <tr>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th class="variants-table-radio"></th>
+                          <th class="variants-table-size">Vel.</th>
+                          <th class="variants-table-width">Vn. délka</th>
+                          <th class="variants-table-delivery">U vás</th>
+                        </tr>
+                      </thead>
+                      <!--{{#products}}-->
+                        <tr class="available-{{available}}">
                           <td class="variants-table-radio">
                             <input type="radio" name="size" id="size-{{size}}" value="{{size}}">
                           </td>
@@ -224,14 +225,13 @@
                           </td>
                           <td class="variants-table-width">{{width}} mm</td>
                           <td class="variants-table-delivery">{{delivery}}</td>
-                      </tr>
+                        </tr>
+                      <!--{{/products}}-->
                     </table>
                   </template>
                 </amp-list>
                 </div>
               </div>
-
-
 
               <div class="add-to-card mb-3">
 

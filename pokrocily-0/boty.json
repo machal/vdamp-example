@@ -1,5 +1,5 @@
 {
-  "items": [
+  "products": [
     { "size": 23, "width": 154, "delivery": "pozítří" , "available": true }, 
     { "size": 24, "width": 161, "delivery": "pozítří" , "available": true }, 
     { "size": 25, "width": 167, "delivery": "za 4 dny" , "available": true }, 
