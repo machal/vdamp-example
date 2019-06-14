@@ -1659,32 +1659,6 @@
     }
 
     /*
-    Layout: "jedna" tabulka pod sebou
-    ----------------------------------
-    */
-    @media only screen and (max-width: 34.99em) {
-      .variants-table:nth-child(2) th {
-        display: none;
-      }
-    }
-    /*
-    Layout: dve tabulky na radce vedle sebe
-    ---------------------------------------
-    */
-    @media only screen and (min-width: 35em) {
-      .variants {
-        display: flex;
-      }
-
-      .variants-table {
-        flex: 1;
-      }
-
-      .variants-table:nth-child(2) {
-        margin-left: 1rem;
-      }
-    }
-    /*
     Rozvrzeni stranky
     =================
     */
